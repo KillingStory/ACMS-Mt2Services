@@ -1,0 +1,181 @@
+RewriteEngine On
+
+RewriteRule ^login ./index.php?p=login
+RewriteRule ^logout ./index.php?p=logout
+RewriteRule ^register ./index.php?p=register
+RewriteRule ^download ./index.php?p=download
+
+RewriteRule ^home/(.*)/ index.php?page_no=$1
+RewriteRule ^home/(.*) index.php?page_no=$1
+RewriteRule ^home/ index.php
+RewriteRule ^home index.php
+
+RewriteRule ^read/(.*)/ index.php?p=read&no=$1
+RewriteRule ^read/(.*) index.php?p=read&no=$1
+
+RewriteRule ^class/players/(.*)/(.*)/ index.php?p=players&page_no=$1&player_name=$2
+RewriteRule ^class/players/(.*)/(.*) index.php?p=players&page_no=$1&player_name=$2
+RewriteRule ^class/players/(.*)/ index.php?p=players&page_no=$1
+RewriteRule ^class/players/(.*) index.php?p=players&page_no=$1
+RewriteRule ^class/players/ index.php?p=players
+RewriteRule ^class/players index.php?p=players
+
+RewriteRule ^class/guilds/(.*)/(.*)/ index.php?p=guilds&page_no=$1&guild_name=$2
+RewriteRule ^class/guilds/(.*)/(.*) index.php?p=guilds&page_no=$1&guild_name=$2
+RewriteRule ^class/guilds/(.*)/ index.php?p=guilds&page_no=$1
+RewriteRule ^class/guilds/(.*) index.php?p=guilds&page_no=$1
+RewriteRule ^class/guilds/ index.php?p=guilds
+RewriteRule ^class/guilds index.php?p=guilds
+
+RewriteRule ^guide ./index.php?p=guide
+RewriteRule ^about_us ./index.php?p=aboutus
+
+RewriteRule ^myaccount ./index.php?p=myaccount
+RewriteRule ^coupon ./index.php?p=coupon
+RewriteRule ^vote/(.*)/ index.php?p=vote&site=$1
+RewriteRule ^vote/(.*) index.php?p=vote&site=$1
+RewriteRule ^vote ./index.php?p=vote
+RewriteRule ^refferal ./index.php?p=refferal
+
+RewriteRule ^forgot_password ./index.php?p=forgot
+
+RewriteRule ^reset_password/(.*)/(.*)/(.*)/ index.php?p=rpassword&accid=$1&login=$2&psl=$3
+RewriteRule ^reset_password/(.*)/(.*)/(.*) index.php?p=rpassword&accid=$1&login=$2&psl=$3
+
+RewriteRule ^reset_mail/(.*)/(.*)/(.*)/ index.php?p=rmail&accid=$1&login=$2&psl=$3
+RewriteRule ^reset_mail/(.*)/(.*)/(.*) index.php?p=rmail&accid=$1&login=$2&psl=$3
+
+RewriteRule ^admin_panel/vote/(.*)/ index.php?p=admin&a=vote&del=$1
+RewriteRule ^admin_panel/vote/(.*) index.php?p=admin&a=vote&del=$1
+
+RewriteRule ^admin_panel/voucher/(.*)/ index.php?p=admin&a=coupon&page_no=$1
+RewriteRule ^admin_panel/voucher/(.*) index.php?p=admin&a=coupon&page_no=$1
+RewriteRule ^admin_panel/voucher/ index.php?p=admin&a=coupon
+RewriteRule ^admin_panel/voucher index.php?p=admin&a=coupon
+
+RewriteRule ^admin_panel/players_management/(.*)/ index.php?p=admin&a=players_management&page_no=$1
+RewriteRule ^admin_panel/players_management/(.*) index.php?p=admin&a=players_management&page_no=$1
+
+RewriteRule ^admin_panel/log/(.*)/(.*) index.php?p=admin&a=log&loguri=$1&page_no=$2
+RewriteRule ^admin_panel/log/(.*)/(.*)/ index.php?p=admin&a=log&loguri=$1&page_no=$2
+
+RewriteRule ^admin_panel/news/(.*)/ index.php?p=admin&a=news&id=$1
+RewriteRule ^admin_panel/news/(.*) index.php?p=admin&a=news&id=$1
+
+RewriteRule ^admin_panel/general-settings/ index.php?p=admin&a=general_settings
+RewriteRule ^admin_panel/general-settings index.php?p=admin&a=general_settings
+
+RewriteRule ^admin_panel/create_item/ index.php?p=admin&a=create_item
+RewriteRule ^admin_panel/create_item index.php?p=admin&a=create_item
+
+RewriteRule ^admin_panel/news-settings/ index.php?p=admin&a=news_settings
+RewriteRule ^admin_panel/news-settings index.php?p=admin&a=news_settings
+
+RewriteRule ^admin_panel/download/ index.php?p=admin&a=download
+RewriteRule ^admin_panel/download index.php?p=admin&a=download
+
+RewriteRule ^admin_panel/pass_encrypt/ index.php?p=admin&a=pass_encrypt
+RewriteRule ^admin_panel/pass_encrypt index.php?p=admin&a=pass_encrypt
+
+RewriteRule ^admin_panel/logs/ index.php?p=admin&a=log
+RewriteRule ^admin_panel/logs index.php?p=admin&a=log
+
+RewriteRule ^admin_panel/refferals/ index.php?p=admin&a=refferals
+RewriteRule ^admin_panel/refferals index.php?p=admin&a=refferals
+
+RewriteRule ^admin_panel/news index.php?p=admin&a=news
+RewriteRule ^admin_panel/news/ index.php?p=admin&a=news
+
+RewriteRule ^admin_panel/store index.php?p=admin&a=store
+RewriteRule ^admin_panel/store/ index.php?p=admin&a=store
+
+RewriteRule ^admin_panel/store/(.*) index.php?p=admin&a=store&category=$1
+RewriteRule ^admin_panel/store/(.*)/ index.php?p=admin&a=store&category=$1
+
+RewriteRule ^admin_panel/languages_edit/(.*)/ index.php?p=admin&a=language_manager&edit=$1
+RewriteRule ^admin_panel/languages_edit/(.*) index.php?p=admin&a=language_manager&edit=$1
+
+RewriteRule ^admin_panel/template_settings index.php?p=admin&a=template_settings
+RewriteRule ^admin_panel/template_settings/ index.php?p=admin&a=template_settings
+
+RewriteRule ^admin_panel/languages index.php?p=admin&a=languages
+RewriteRule ^admin_panel/languages/ index.php?p=admin&a=languages
+
+RewriteRule ^admin_panel/upload-client index.php?p=admin&a=upload_client
+RewriteRule ^admin_panel/upload-client/ index.php?p=admin&a=upload_client
+
+RewriteRule ^admin_panel/player_inventory/(.*)/ index.php?p=admin&a=player_inventory&playerids=$1
+RewriteRule ^admin_panel/player_inventory/(.*) index.php?p=admin&a=player_inventory&playerids=$1
+
+RewriteRule ^admin_panel/custom-page/(.*)/ index.php?p=admin&a=custom_page&variablepage=$1
+RewriteRule ^admin_panel/custom-page/(.*) index.php?p=admin&a=custom_page&variablepage=$1
+
+# ADD RULES HERE
+
+RewriteRule ^admin_panel/(.*)/ index.php?p=admin&a=$1
+RewriteRule ^admin_panel/(.*) index.php?p=admin&a=$1
+RewriteRule ^admin_panel/ index.php?p=admin
+RewriteRule ^admin_panel index.php?p=admin
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/rss+xml
+  AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+  AddOutputFilterByType DEFLATE application/x-font
+  AddOutputFilterByType DEFLATE application/x-font-opentype
+  AddOutputFilterByType DEFLATE application/x-font-otf
+  AddOutputFilterByType DEFLATE application/x-font-truetype
+  AddOutputFilterByType DEFLATE application/x-font-ttf
+  AddOutputFilterByType DEFLATE application/x-javascript
+  AddOutputFilterByType DEFLATE application/xhtml+xml
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE font/opentype
+  AddOutputFilterByType DEFLATE font/otf
+  AddOutputFilterByType DEFLATE font/ttf
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE image/x-icon
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE text/plain
+</IfModule>
+<IfModule mod_gzip.c>
+  mod_gzip_on Yes
+  mod_gzip_dechunk Yes
+  mod_gzip_item_include file .(html?|txt|css|js|php|pl)$
+  mod_gzip_item_include handler ^cgi-script$
+  mod_gzip_item_include mime ^text/.*
+  mod_gzip_item_include mime ^application/x-javascript.*
+  mod_gzip_item_exclude mime ^image/.*
+  mod_gzip_item_exclude rspheader ^Content-Encoding:.gzip.
+</IfModule>
+
+# Leverage Browser Caching
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpg "access 1 year"
+  ExpiresByType image/jpeg "access 1 year"
+  ExpiresByType image/gif "access 1 year"
+  ExpiresByType image/png "access 1 year"
+  ExpiresByType text/css "access 1 month"
+  ExpiresByType text/html "access 1 month"
+  ExpiresByType application/pdf "access 1 month"
+  ExpiresByType text/x-javascript "access 1 month"
+  ExpiresByType application/x-shockwave-flash "access 1 month"
+  ExpiresByType image/x-icon "access 1 year"
+  ExpiresDefault "access 1 month"
+</IfModule>
+<IfModule mod_headers.c>
+  <filesmatch "\.(ico|flv|jpg|jpeg|png|gif|css|swf)$">
+  Header set Cache-Control "max-age=2678400, public"
+  </filesmatch>
+  <filesmatch "\.(html|htm)$">
+  Header set Cache-Control "max-age=7200, private, must-revalidate"
+  </filesmatch>
+  <filesmatch "\.(pdf)$">
+  Header set Cache-Control "max-age=86400, public"
+  </filesmatch>
+  <filesmatch "\.(js)$">
+  Header set Cache-Control "max-age=2678400, private"
+  </filesmatch>
+</IfModule>
